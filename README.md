@@ -59,7 +59,11 @@ kubectl get svc
 ```
 Rest API can be tested on 
 ```
-http://EXTERNAL-IP:<port from rest-node-app-svc>
+http://EXTERNAL-IP:3000
+```
+If you run app on local kubenetes desktop
+```
+http://localhost:3000
 ```
 RUN route.rest file GET,POST,PATCH, DELETE connections to test API<br>
 ## Clean up Resources
