@@ -52,7 +52,7 @@ kubectl get all
 ```
 Deploy Node Js Rest Api to GKE
 ```
-kubectl apply -k ./
+kubectl apply -k ./kubernetes_deployment/
 ```
 ```
 kubectl get svc
@@ -63,6 +63,9 @@ http://EXTERNAL-IP:<port from rest-node-app-svc>
 ```
 RUN route.rest file GET,POST,PATCH, DELETE connections to test API<br>
 ## Clean up Resources
+```
+kubectl delete -k ./kubernetes_deployment/
+```
 ```
 terraform destroy
 ```

@@ -1,4 +1,4 @@
-GET http://127.0.0.1:32404/subscribers
+GET http://34.172.21.250:31540/subscribers
 
 ###
 POST http://127.0.0.1:32404/subscribers

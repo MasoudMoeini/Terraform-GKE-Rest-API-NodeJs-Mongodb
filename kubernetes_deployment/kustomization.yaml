@@ -6,3 +6,4 @@ secretGenerator:
 resources:
   - rest-node-app-deployment.yaml
   - mongodb-deployment.yaml
+

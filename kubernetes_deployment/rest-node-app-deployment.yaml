@@ -20,7 +20,7 @@ spec:
         env:
        #MONGODB_CONNSTRING=mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOSTNAME}:${MONGO_PORT}/${MONGO_DB}?authSource=admin
         - name: RESTNODE_DB_HOST 
-          value: 'mongodb-service'  
+          value: mongodb-service  
         - name: RESTNODE_DB_USERNAME
           valueFrom:
             secretKeyRef:
@@ -39,7 +39,7 @@ kind: Service
 metadata:
   name: rest-node-app-svc
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: restnodejs
   ports:
