@@ -23,17 +23,17 @@ terraform init -upgrade
 ```
 terraform apply
 ```
-## Set Rest API Nodejs - Mongodb 
+## Set up Rest API Nodejs - Mongodb 
 [Reference:Nodejs-rest-api](https://github.com/MasoudMoeini/Jenkins-Deploy-App-to-kubernetes/tree/node-rest-api)<br>
 ```
- npm install
- ```
- RUN API locally 
- ```
- npm run devStart
- ``` 
- Install Rest Client extension on VS-Code<br>
- You may test rest api application on route.rest file or by Postman<br>
+npm install
+```
+RUN API locally 
+```
+npm run devStart
+``` 
+Install Rest Client extension on VS-Code<br>
+You may test rest api application on route.rest file or by Postman<br>
 ### Building Docker image from app and push it to hub
 ```
 docker build -t masodatc/rest-api-nodejs:01 .
