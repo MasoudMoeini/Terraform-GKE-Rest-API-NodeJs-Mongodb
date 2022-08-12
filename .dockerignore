@@ -1,0 +1,5 @@
+node_modules/
+route.rest
+Dockerfile
+README.md
+kubernetes_deployment/

@@ -1,0 +1,34 @@
+GET http://127.0.0.1:32404/subscribers
+
+###
+POST http://127.0.0.1:32404/subscribers
+Content-Type: application/json
+
+{
+  "name": "Amazing Person",
+  "subscribedToChannel": "Web Dev Simplified"
+}
+### 
+GET http://127.0.0.1:3000/subscribers/
+### 
+POST http://127.0.0.1:3000/subscribers
+Content-Type: application/json
+
+{
+  "name": "Rich Person",
+  "subscribedToChannel": "Web Dev Simplified"
+}
+###
+GET http://127.0.0.1:3000/subscribers/
+62f234f28e04f55f2078ac7c
+
+### 
+PATCH http://127.0.0.1:3000/subscribers/62f542d2d68f3b306131ae11
+Content-Type: application/json
+
+{
+  "name": "Well-Known Person",
+  "subscribedToChannel": "Cloud Developper"
+}
+### 
+DELETE http://127.0.0.1:3000/subscribers/62f234f28e04f55f2078ac7c
