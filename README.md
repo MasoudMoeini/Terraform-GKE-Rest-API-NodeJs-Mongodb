@@ -62,7 +62,7 @@ Rest API can be tested on
 http://EXTERNAL-IP:<port from rest-node-app-svc>
 ```
 RUN route.rest file GET,POST,PATCH, DELETE connections to test API<br>
-# Clean up Resources
+## Clean up Resources
 ```
 terraform destroy
 ```
