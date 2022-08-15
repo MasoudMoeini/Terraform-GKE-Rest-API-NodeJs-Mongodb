@@ -23,7 +23,7 @@ db.once('open', () => console.log('Connected to Database'))
 
 //Set up API transactions 
 app.get("/", (req, res) => {
-  res.send("Hi pls use /subscribers/ end-point to access database records");
+  res.send("Hi pls use /subscribers end-point to access database records");
 });
 
 app.use(express.json())
