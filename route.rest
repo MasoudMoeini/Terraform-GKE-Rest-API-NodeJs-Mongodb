@@ -9,7 +9,7 @@ Content-Type: application/json
   "subscribedToChannel": "Web Dev Simplified"
 }
 ### 
-GET http://127.0.0.1:3200/
+GET http://127.0.0.1:3000/
 ### 
 POST http://127.0.0.1:3000/subscribers
 Content-Type: application/json
