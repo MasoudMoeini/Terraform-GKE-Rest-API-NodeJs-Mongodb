@@ -1,8 +1,10 @@
 //require('dotenv').config()
+const Joi = require('@hapi/joi');
 const express = require('express')
 const app = express()
 const cors = require('cors');
 app.use(cors())
+
 const mongoose = require('mongoose')
 const hostname = '0.0.0.0';
 const port = process.env.PORT || 3000;

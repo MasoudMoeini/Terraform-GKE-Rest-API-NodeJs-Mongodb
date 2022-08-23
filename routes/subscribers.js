@@ -1,4 +1,5 @@
 const express = require('express')
+const Joi = require('@hapi/joi')
 const router = express.Router()
 const Subscriber = require('../models/subscriber')
 
@@ -19,6 +20,14 @@ router.get('/:id', getSubscriber, (req, res) => {
 
 // Creating one
 router.post('/', async (req, res) => {
+  const {error} = validateSubscribers(req.body);
+  //const result = Joi.validate(req.body,schema);
+  if(error){
+    res.status(400).send(error.details[0].message);
+    return;
+  }
+ 
+
   const subscriber = new Subscriber({
     name: req.body.name,
     subscribedToChannel: req.body.subscribedToChannel
@@ -33,12 +42,20 @@ router.post('/', async (req, res) => {
 
 // Updating One
 router.patch('/:id', getSubscriber, async (req, res) => {
+  const {error} = validateSubscribers(req.body);
+  //const result = Joi.validate(req.body,schema);
+  if(error){
+    res.status(400).send(error.details[0].message);
+    return;
+  }
+  //we dont need this part ***
   if (req.body.name != null) {
     res.subscriber.name = req.body.name
   }
   if (req.body.subscribedToChannel != null) {
     res.subscriber.subscribedToChannel = req.body.subscribedToChannel
   }
+  //*** 
   try {
     const updatedSubscriber = await res.subscriber.save()
     res.json(updatedSubscriber)
@@ -73,3 +90,11 @@ async function getSubscriber(req, res, next) {
 }
 
 module.exports = router
+function validateSubscribers(subscriberRequest){
+   const schema = Joi.object({
+    name: Joi.string().min(3).required(),
+    subscribedToChannel: Joi.string().min(8).required()
+  })
+  return Joi.validate(subscriberRequest,schema);
+
+}

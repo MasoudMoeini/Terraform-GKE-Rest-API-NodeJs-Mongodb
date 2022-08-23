@@ -5,8 +5,8 @@ POST http://127.0.0.1:3000/subscribers
 Content-Type: application/json
 
 {
-  "name": "Amazing Person",
-  "subscribedToChannel": "Web Dev Simplified"
+  "name": "Anete Pik",
+  "subscribedToChannel": "Web Developer"
 }
 ### 
 GET http://127.0.0.1:3000/
@@ -15,20 +15,20 @@ POST http://127.0.0.1:3000/subscribers
 Content-Type: application/json
 
 {
-  "name": "Rich Person",
-  "subscribedToChannel": "Web Dev Simplified"
+  "name": "Rich Girl",
+  "subscribedToChannel": "Compnay CTO"
 }
 ###
-GET http://127.0.0.1:3000/subscribers/
-62f6125228f3a7d3096e3502
+GET http://127.0.0.1:3000/subscribers/62fbe573d0cda2afddbba553
+
 
 ### 
-PATCH http://127.0.0.1:3000/subscribers/62f6125228f3a7d3096e3502
+PATCH http://127.0.0.1:3000/subscribers/63047ba4294f53ca35321796
 Content-Type: application/json
 
 {
-  "name": "Well-Known Person",
-  "subscribedToChannel": "Cloud Developper"
+  "name": "Anete Pik",
+  "subscribedToChannel": "Cloud developer"
 }
 ### 
-DELETE http://127.0.0.1:3000/subscribers/62f234f28e04f55f2078ac7c
+DELETE http://127.0.0.1:3000/subscribers/6303363a73c8e2652f3f467d
